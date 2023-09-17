@@ -1,5 +1,5 @@
 server:
-  port: 8209
+  port: 8210
 mybatis-plus:
   type-enums-package: com.atguigu.ssyx.enums
   configuration:
@@ -21,6 +21,13 @@ spring:
     port: 5672
     username: guest
     password: guest
+    publisher-confirm-type: CORRELATED
+    publisher-returns: true
+    listener:
+      simple:
+        prefetch: 1
+        concurrency: 3
+        acknowledge-mode: manual
   redis:
     host: localhost
     port: 6379
@@ -38,7 +45,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/shequ-order?characterEncoding=utf-8&useSSL=false
     username: root
-    password: 200409wc
+    password: root
     hikari:
       connection-test-query: SELECT 1
       connection-timeout: 60000
@@ -50,3 +57,11 @@ spring:
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
+# 微信
+weixin:
+  #小程序微信公众平台appId
+  appid: wxcc651fcbab275e33
+  partner: 1481962542
+  partnerkey: MXb72b9RfshXZD4FRGV5KLqmv5bx9LT9
+  notifyurl: http://gmall-prod.atguigu.cn/api/payment/weixin/notify
+  cert: D:\yygh_work\yygh_parent\service\service-order\src\main\resources\apiclient_cert.p12

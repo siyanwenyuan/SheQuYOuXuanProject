@@ -1,7 +1,7 @@
 package com.chen.activity.mapper;
 
-import com.chen.activity.entity.SeckillTime;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.chen.search.model.activity.SeckillTime;
 
 /**
  * <p>

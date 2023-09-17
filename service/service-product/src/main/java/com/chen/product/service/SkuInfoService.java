@@ -6,6 +6,9 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.chen.search.model.product.SkuInfo;
 import com.chen.search.vo.product.SkuInfoQueryVo;
 import com.chen.search.vo.product.SkuInfoVo;
+import com.chen.search.vo.product.SkuStockLockVo;
+
+import java.util.List;
 
 /**
  * <p>
@@ -26,4 +29,16 @@ public interface SkuInfoService extends IService<SkuInfo> {
     void checkStatus(Long id, Integer status);
 
     void isNewPerson(Long id, Integer status);
+
+    List<SkuInfo> findSkuInFoListById(List<Long> skuId);
+
+    List<SkuInfo> findSkuInfoByKeyword(String keyword);
+
+    List<SkuInfo> findNewPersonSkuInfoList();
+
+    SkuInfoVo getSkuInfo(Long skuId);
+
+    Boolean chekAndLock(List<SkuStockLockVo> skuStockLockVoList, String orderNo);
+
+    void miusStock(String orderNo);
 }

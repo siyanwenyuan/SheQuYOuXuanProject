@@ -1,7 +1,7 @@
 package com.chen.activity.mapper;
 
-import com.chen.activity.entity.Seckill;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.chen.search.model.activity.Seckill;
 
 /**
  * <p>

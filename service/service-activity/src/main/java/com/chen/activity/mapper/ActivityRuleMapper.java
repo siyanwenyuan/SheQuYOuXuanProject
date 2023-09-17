@@ -1,7 +1,8 @@
 package com.chen.activity.mapper;
 
-import com.chen.activity.entity.ActivityRule;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.chen.search.model.activity.ActivityRule;
+import org.springframework.stereotype.Repository;
 
 /**
  * <p>
@@ -11,6 +12,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author chenwan
  * @since 2023-07-23
  */
+
+@Repository
 public interface ActivityRuleMapper extends BaseMapper<ActivityRule> {
 
 }

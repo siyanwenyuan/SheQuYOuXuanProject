@@ -1,7 +1,12 @@
 package com.chen.order.service;
 
-import com.chen.order.entity.OrderInfo;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.chen.search.model.order.OrderInfo;
+import com.chen.search.vo.order.OrderConfirmVo;
+import com.chen.search.vo.order.OrderSubmitVo;
+import com.chen.search.vo.order.OrderUserQueryVo;
 
 /**
  * <p>
@@ -13,4 +18,15 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface OrderInfoService extends IService<OrderInfo> {
 
+    OrderConfirmVo confirmOrder();
+
+    Long submitOrder(OrderSubmitVo orderParamVo);
+
+    OrderInfo getOrderInfoById(Long orderId);
+
+    OrderInfo getorderInfo(String orderNo);
+
+    void updatePayStatus(String orderNo);
+
+    IPage<OrderInfo> getPageModel(Page<OrderInfo> infoPage, OrderUserQueryVo orderUserQueryVo);
 }

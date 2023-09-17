@@ -1,4 +1,4 @@
-package com.chen.ssyx;
+package com.chen.cart;
 
 
 import org.springframework.boot.SpringApplication;

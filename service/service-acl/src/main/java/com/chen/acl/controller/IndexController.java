@@ -12,7 +12,6 @@ import java.util.Map;
 @Api(tags = "登录接口")// 这个注解作用是：在接口文档中本来显示的有原本的英文接口，加上这个注解，可以设置成中文接口名
 @RestController// 此注解的含义是： 在spring中进行注册，rest 是返回的json格式
 @RequestMapping("/admin/acl/index")// 统一的前面的接口路径
-@CrossOrigin//此注解解决服务器跨域的问题，因为对于前后端服务端的跨域问题,前后端是需要访问的相同资源，通过ip,协议,端口看进行限定
 
 public class IndexController {
 

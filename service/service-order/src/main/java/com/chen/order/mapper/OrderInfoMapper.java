@@ -1,7 +1,7 @@
 package com.chen.order.mapper;
 
-import com.chen.order.entity.OrderInfo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.chen.search.model.order.OrderInfo;
 
 /**
  * <p>

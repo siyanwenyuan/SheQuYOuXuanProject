@@ -1,4 +1,4 @@
-package com.chen.ssyx.config;
+package com.chen.config;
 
 
 import org.springframework.context.annotation.Bean;

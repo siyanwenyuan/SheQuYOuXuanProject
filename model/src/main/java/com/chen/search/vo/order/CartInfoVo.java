@@ -16,7 +16,7 @@ import java.util.List;
  * @author qy
  */
 @Data
-public class CartInfoVo implements Serializable {
+public class CartInfoVo extends  CartInfo implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 

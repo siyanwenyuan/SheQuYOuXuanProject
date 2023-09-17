@@ -1,7 +1,8 @@
 package com.chen.activity.mapper;
 
-import com.chen.activity.entity.CouponRange;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.chen.search.model.activity.CouponRange;
+import org.springframework.stereotype.Repository;
 
 /**
  * <p>
@@ -11,6 +12,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author chenwan
  * @since 2023-07-23
  */
+@Repository
 public interface CouponRangeMapper extends BaseMapper<CouponRange> {
 
 }

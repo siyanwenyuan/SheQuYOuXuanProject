@@ -2,4 +2,31 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.chen.product.mapper.SkuInfoMapper">
 
+
+    <resultMap id="skuInfoMap" type="com.chen.search.model.product.SkuInfo" autoMapping="true"></resultMap>
+
+
+    <!--验证库存，for update  是加锁操作-->
+    <select id="checkStock" resultMap="skuInfoMap">
+        select id,category_id,sku_type,sku_name,img_url,per_limit,publish_status,check_status,is_new_person,sort,sku_code,price,market_price,stock,lock_stock,low_stock,sale,ware_id,create_time,update_time,is_deleted
+    from sku_info where id=#{skuId} and stock-lock_stock>#{skuNum} for update
+
+    </select>
+
+    <!--加锁操作-->
+<update id="lockStock" >
+    update sku_info set lock_stock=lock_stock+#{skuNum} where id=#{skuId}
+
+</update>
+<!--解锁操作-->
+    <update id="unLockStock">
+        update sku_info set lock_stock=lock_stock-#{skuNum} where id=#{skuId}
+    </update>
+
+    <!--减库存-->
+    <update id="miusStockDelete">
+
+        update sku_info set stock=stock-#{skuNum},lock_stock=lock_stock-#{skuNum},
+                            sale=sale+#{skuNum} where id=#{skuId}
+    </update>
 </mapper>

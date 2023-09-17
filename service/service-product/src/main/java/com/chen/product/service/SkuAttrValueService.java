@@ -3,6 +3,8 @@ package com.chen.product.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.chen.search.model.product.SkuAttrValue;
 
+import java.util.List;
+
 /**
  * <p>
  * spu属性值 服务类
@@ -13,4 +15,5 @@ import com.chen.search.model.product.SkuAttrValue;
  */
 public interface SkuAttrValueService extends IService<SkuAttrValue> {
 
+    List<SkuAttrValue> SkuAttrValue(Long id);
 }

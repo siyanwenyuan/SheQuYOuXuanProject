@@ -1,7 +1,7 @@
 package com.chen.activity.mapper;
 
-import com.chen.activity.entity.SkuInfo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.chen.search.model.product.SkuInfo;
 
 /**
  * <p>

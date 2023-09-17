@@ -1,4 +1,4 @@
-package com.chen.ssyx.mq.config;
+package com.chen.activity.mq.config;
 
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.amqp.support.converter.MessageConverter;

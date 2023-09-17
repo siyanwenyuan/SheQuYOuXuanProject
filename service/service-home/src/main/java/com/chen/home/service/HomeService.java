@@ -1,2 +1,7 @@
-package com.chen.home.service;public interface HomeService {
+package com.chen.home.service;
+
+import java.util.Map;
+
+public interface HomeService {
+    Map<String, Object> indexData(Long userId);
 }

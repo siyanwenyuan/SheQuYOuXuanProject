@@ -20,7 +20,6 @@ import java.util.List;
 @Api(tags = "角色管理")//在接口文档中可以显示中文
 @RestController
 @RequestMapping("/admin/acl/role")
-@CrossOrigin//解决前后端跨域问题
 
 public class RoleController {//角色列表（条件分页查询）
 

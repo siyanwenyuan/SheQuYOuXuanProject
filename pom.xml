@@ -14,6 +14,8 @@
         <module>service</module>
         <module>service/service-sys</module>
         <module>service-client</module>
+        <module>service-gateway</module>
+        <module>redis</module>
     </modules>
 
     <parent>

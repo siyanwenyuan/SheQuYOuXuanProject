@@ -1,4 +1,4 @@
-package com.atguigu.ssyx.payment.util;
+package com.chen.payment.utils;
 
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Value;

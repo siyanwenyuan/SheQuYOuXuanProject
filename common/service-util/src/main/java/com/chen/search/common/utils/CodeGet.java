@@ -20,16 +20,16 @@ public class CodeGet {
         // 全局配置
         GlobalConfig gc = new GlobalConfig();
         //D:\JavaDemo\guigu-ssyx-parent\service\service-sys
-        gc.setOutputDir("D:\\JavaDemo\\guigu-ssyx-parent\\service\\service-product"+"/src/main/java");
+        gc.setOutputDir("D:\\JavaDemo\\guigu-ssyx-parent\\service\\service-order" + "/src/main/java");
 
-        gc.setServiceName("%sService");	//去掉Service接口的首字母I
+        gc.setServiceName("%sService");    //去掉Service接口的首字母I
         gc.setAuthor("chenwan");
         gc.setOpen(false);
         mpg.setGlobalConfig(gc);
 
         // 3、数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://localhost:3306/shequ-product?serverTimezone=GMT%2B8&useSSL=false");
+        dsc.setUrl("jdbc:mysql://localhost:3306/shequ-order?serverTimezone=GMT%2B8&useSSL=false");
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("root");
         dsc.setPassword("200409wc");
@@ -39,17 +39,19 @@ public class CodeGet {
         // 4、包配置
         PackageConfig pc = new PackageConfig();
         pc.setParent("com.chen");
-        pc.setModuleName("product"); //模块名
+        pc.setModuleName("order"); //模块名
         pc.setController("controller");
         pc.setService("service");
         pc.setMapper("mapper");
         mpg.setPackageInfo(pc);
+        /**
+         * activity_info
+         */
 
         // 5、策略配置
         StrategyConfig strategy = new StrategyConfig();
 
-        strategy.setInclude("attr","attr_group","base_category_trademark","category","comment","comment_replay",
-                "mq_repeat_record","region_ware","sku_attr_value","sku_detail","sku_image","sku_info","sku_poster","sku_stock_history","ware");
+        strategy.setInclude("order_info","order_item");
 
         strategy.setNaming(NamingStrategy.underline_to_camel);//数据库表映射到实体的命名策略
 

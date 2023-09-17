@@ -26,7 +26,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/admin/sys/ware")
 @Api(tags = "查询所有仓库")
-@CrossOrigin
 public class WareController {
 
     @Autowired

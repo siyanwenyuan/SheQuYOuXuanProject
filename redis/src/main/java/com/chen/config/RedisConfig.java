@@ -1,2 +1,7 @@
-package com.chen.config;public class RedisConfig {
+package com.chen.config;
+
+
+
+
+public class RedisConfig {
 }

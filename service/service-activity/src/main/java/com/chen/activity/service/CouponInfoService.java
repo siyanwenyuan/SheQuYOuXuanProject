@@ -1,7 +1,14 @@
 package com.chen.activity.service;
 
-import com.chen.activity.entity.CouponInfo;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.chen.search.model.activity.CouponInfo;
+import com.chen.search.model.order.CartInfo;
+import com.chen.search.vo.activity.CouponRuleVo;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -13,4 +20,13 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface CouponInfoService extends IService<CouponInfo> {
 
+    IPage<CouponInfo> selectPageLimit(Page<CouponInfo> couponInfoPage);
+
+    Map<String, Object> selectList(Long id);
+
+    void saveCouponRule(CouponRuleVo couponRuleVo);
+
+    List<CouponInfo> findCouponInfoList(Long skuId, Long userId);
+
+    CouponInfo findRangeSkuIdList(List<CartInfo> cartInfoList, Long couponId);
 }
