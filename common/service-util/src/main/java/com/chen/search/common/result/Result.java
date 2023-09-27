@@ -3,6 +3,11 @@ package com.chen.search.common.result;
 
 import lombok.Data;
 
+
+/**
+ * 学号
+ */
+
 /**
  * 泛型类中：
  *  其中因为需要对data中的数据进行类型的确当，所以需要设置一个泛型类，但是由于数据类型的不确定，所以设置为T

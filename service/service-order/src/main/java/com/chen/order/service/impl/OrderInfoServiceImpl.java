@@ -288,6 +288,7 @@ public class OrderInfoServiceImpl extends ServiceImpl<OrderInfoMapper, OrderInfo
         List<OrderInfo> recoredsList = orderInfoPage.getRecords();
         for (OrderInfo orderInfo : recoredsList) {
 
+
             List<OrderItem> orderItemList = orderItemMapper.selectList(new LambdaQueryWrapper<OrderItem>().
                     eq(OrderItem::getOrderId, orderInfo.getId()));
 
